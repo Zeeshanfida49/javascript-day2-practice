@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Day 2 JavaScript practice: grade calculator, number games, and electricity bill calculator."
+  >
+
+  <title>Day 2 JavaScript Practice | Zeeshan Fida</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="#">Zeeshan Fida<span>.</span></a>
+
+      <nav aria-label="Main navigation">
+        <a href="#grades">Grades</a>
+        <a href="#numbers">Number Games</a>
+        <a href="#electricity">Electricity Bill</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro" aria-labelledby="page-title">
+  <div class="intro-content">
+    <p class="eyebrow">TECH SG STUDIO / DAY 02</p>
+
+    <h1 id="page-title">
+      Small challenges.<br>
+      <span>Stronger logic.</span>
+    </h1>
+
+    <p class="intro-description">
+      An interactive JavaScript workspace for practicing functions,
+      conditions, and loops through everyday calculations.
+    </p>
+
+    <a class="start-link" href="#grades">Explore the tasks <span>↗</span></a>
+  </div>
+
+  <aside class="workspace-summary" aria-labelledby="summary-title">
+    <p class="summary-label">YOUR PRACTICE WORKSPACE</p>
+    <h2 id="summary-title">Logic & Functions</h2>
+
+    <ul class="summary-list">
+      <li>
+        <span class="summary-number">01</span>
+        <div>
+          <strong>Grade Calculator</strong>
+          <span>Arrays & conditions</span>
+        </div>
+      </li>
+
+      <li>
+        <span class="summary-number">02</span>
+        <div>
+          <strong>Number Games</strong>
+          <span>Loops & functions</span>
+        </div>
+      </li>
+
+      <li>
+        <span class="summary-number">03</span>
+        <div>
+          <strong>Electricity Bill</strong>
+          <span>Progressive calculations</span>
+        </div>
+      </li>
+    </ul>
+
+    <p class="summary-note">Built with HTML, CSS & JavaScript</p>
+  </aside>
+</section>
+
+    <section class="card" id="grades" aria-labelledby="grade-title">
+      <div class="section-heading">
+        <span class="task-number">01</span>
+
+        <div>
+          <h2 id="grade-title">Grade Calculator</h2>
+          <p>Enter five subject marks. Each subject is out of 100.</p>
+        </div>
+      </div>
+
+      <form id="grade-form">
+        <div class="form-grid">
+          <label for="english">
+            English
+            <input
+              id="english"
+              name="marks"
+              type="number"
+              min="0"
+              max="100"
+              step="1"
+              value="80"
+              required
+            >
+          </label>
+
+          <label for="math">
+            Mathematics
+            <input
+              id="math"
+              name="marks"
+              type="number"
+              min="0"
+              max="100"
+              step="1"
+              value="75"
+              required
+            >
+          </label>
+
+          <label for="science">
+            Science
+            <input
+              id="science"
+              name="marks"
+              type="number"
+              min="0"
+              max="100"
+              step="1"
+              value="70"
+              required
+            >
+          </label>
+
+          <label for="computer">
+            Computer Science
+            <input
+              id="computer"
+              name="marks"
+              type="number"
+              min="0"
+              max="100"
+              step="1"
+              value="65"
+              required
+            >
+          </label>
+
+          <label for="urdu">
+            Urdu
+            <input
+              id="urdu"
+              name="marks"
+              type="number"
+              min="0"
+              max="100"
+              step="1"
+              value="60"
+              required
+            >
+          </label>
+        </div>
+
+        <p class="hint">
+          Grades: A+ ≥ 80%, A ≥ 70%, B ≥ 60%, C ≥ 33%, F &lt; 33%.
+          Any subject below 33 marks means Fail.
+        </p>
+
+        <button type="submit">Calculate Result</button>
+      </form>
+
+      <div class="result" aria-live="polite" aria-atomic="true">
+        <h3>Your Result</h3>
+        <pre id="grade-result">Submit your marks to see the result.</pre>
+      </div>
+    </section>
+
+    <section class="card" id="numbers" aria-labelledby="numbers-title">
+      <div class="section-heading">
+        <span class="task-number">02</span>
+
+        <div>
+          <h2 id="numbers-title">Number Games</h2>
+          <p>Practice functions, loops, and conditions.</p>
+        </div>
+      </div>
+
+      <form id="table-form">
+        <label for="table-number">
+          Multiplication table number
+          <input
+            id="table-number"
+            type="number"
+            min="-1000000"
+            max="1000000"
+            step="1"
+            value="5"
+            required
+          >
+        </label>
+
+        <button type="submit">Generate Table</button>
+      </form>
+
+      <div class="result" aria-live="polite" aria-atomic="true">
+        <h3>Multiplication Table</h3>
+        <pre id="table-result">Generate a table to see the result.</pre>
+      </div>
+
+      <div class="output-grid">
+        <div class="result">
+          <h3>Even Numbers: 1–50</h3>
+          <p id="even-result"></p>
+        </div>
+
+        <div class="result">
+          <h3>Sum: 1–100</h3>
+          <p class="big-number" id="sum-result"></p>
+        </div>
+      </div>
+
+      <div class="result">
+        <h3>FizzBuzz: 1–30</h3>
+        <p class="hint">
+          Multiples of 3: Fizz. Multiples of 5: Buzz.
+          Multiples of both: FizzBuzz.
+        </p>
+
+        <div class="chips" id="fizzbuzz-result"></div>
+      </div>
+
+      <div class="bonus">
+        <h3>Bonus: Palindrome Checker</h3>
+        <p>A palindrome reads the same forward and backward.</p>
+
+        <form id="palindrome-form">
+          <label for="palindrome-text">
+            Word or sentence
+            <input
+              id="palindrome-text"
+              type="text"
+              value="madam"
+              maxlength="200"
+              required
+            >
+          </label>
+
+          <button type="submit">Check Palindrome</button>
+        </form>
+
+        <p
+          class="message"
+          id="palindrome-result"
+          aria-live="polite"
+        ></p>
+      </div>
+    </section>
+
+    <section
+      class="card"
+      id="electricity"
+      aria-labelledby="electricity-title"
+    >
+      <div class="section-heading">
+        <span class="task-number">03</span>
+
+        <div>
+          <h2 id="electricity-title">Electricity Bill</h2>
+          <p>Calculate a bill using progressive practice rates.</p>
+        </div>
+      </div>
+
+      <ul class="rate-list">
+        <li>First 100 units: Rs. 10 per unit</li>
+        <li>Next 100 units: Rs. 15 per unit</li>
+        <li>Remaining units: Rs. 20 per unit</li>
+      </ul>
+
+      <form id="bill-form">
+        <label for="units">
+          Electricity units
+          <input
+            id="units"
+            type="number"
+            min="0"
+            max="1000000"
+            step="1"
+            value="150"
+            required
+          >
+        </label>
+
+        <button type="submit">Calculate Bill</button>
+      </form>
+
+      <div class="result" aria-live="polite" aria-atomic="true">
+        <h3>Bill Breakdown</h3>
+        <pre id="bill-result">Submit your units to see the bill.</pre>
+      </div>
+
+      <p class="hint">
+        These rates are for practice only. They are not real electricity tariffs.
+      </p>
+
+      <div class="test-panel">
+        <h3>Required Test Cases</h3>
+
+        <div class="table-wrapper">
+          <table>
+            <caption>Checking calculateBill against expected results</caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Units</th>
+                <th scope="col">Expected</th>
+                <th scope="col">Calculated</th>
+                <th scope="col">Test</th>
+              </tr>
+            </thead>
+
+            <tbody id="bill-tests"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="container footer-content">
+    <div>
+      <a class="brand" href="#">Zeeshan<span>.</span></a>
+      <p>Learning by building, one task at a time.</p>
+    </div>
+
+    <div class="footer-details">
+      <p>Tech SG Studio · Day 02</p>
+      <a href="#">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
